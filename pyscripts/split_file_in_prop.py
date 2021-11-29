@@ -3,13 +3,9 @@ import random
 import shutil
 
 
-def split_file_in_prop(src_list, list1, list2, list1_prop=0.1):
+def split_file_in_prop(src_list, list1, list2, list1_prop=0.2):
     """
     split src_list into two parts
-    src_list = "../train_list_pair/train_all_20201230.txt" 
-    list1 = "../train_list_pair/train_all_20201230_prop001.txt"
-    list2 = "../train_list_pair/train_all_20201230_prop099.txt"
-    split_file_in_prop(src_list, list1, list2)
     """
     with open(src_list, 'r') as fr, open(list1, 'w') as fw1,  open(list2, 'w') as fw2: 
         lines = fr.readlines()
@@ -63,19 +59,17 @@ def pick_file(src_list, dst_dir):
 
 
 
-
 if __name__ == "__main__":
-    # src_list = "/home/projects/list/list_mask/MLT_door_mask_0323_remake_v3.txt" 
-    # list1 = "/home/projects/list/list_mask/MLT_door_mask_0323_remake_v3_test.txt" 
-    # list2 = "/home/projects/list/list_mask/MLT_door_mask_0323_remake_v3_train.txt" 
-    # split_file_in_prop(src_list, list1, list2)
+    src_list = "/home/data/data/bing_zhi/list/data_4.txt"
+    list1 = "/home/data/data/bing_zhi/list/data_4_test.txt"
+    list2 = "/home/data/data/bing_zhi/list/data_4_train.txt"
+    split_file_in_prop(src_list, list1, list2)
 
-    src_list = "/home/projects/list/list_72/cbsr_mas_v6_hifi-mask-test_bbox.txt"
-    dst_list  = "/home/projects/test_cbsr_prop002.txt"
-    dst_dir="/home/projects/test_cbsr_prop002"
-    pick_file_in_prop(src_list, dst_list, dst_dir)
+    # src_list = "/home/projects/list/list_72/cbsr_mas_v6_hifi-mask-test_bbox.txt"
+    # dst_list  = "/home/projects/test_cbsr_prop002.txt"
+    # dst_dir="/home/projects/test_cbsr_prop002"
+    # pick_file_in_prop(src_list, dst_list, dst_dir)
 
     # src_list = "/home/projects/list/list_mask/MLT_door_mask_0323_all_test_bbox.txt"
     # dst_dir = "/home/projects/test_mask/"
     # pick_file(src_list, dst_dir)
-    
