@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /mnt/data/ly_zhijia/data/zip_file/data3_zip
+cd /path/to/zip/file/folder
 ls *.rar >> ls.log
 data=$(cat ls.log)
 for i in $data
