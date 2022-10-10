@@ -1,5 +1,4 @@
 # coding=utf-8
-# Reference：https://code.mlamp.cn/mas/dllab/demo_face/blob/master/src/face_api/action.py
 import cv2
 import requests
 import base64
@@ -8,7 +7,7 @@ from glob import glob
 
 
 
-def get_info(img_path, url="https://dllab.mininglamp.com/demo/face/api/liveness/"):
+def get_info(img_path, url="https://dllab.m*******.com/demo/face/api/liveness/"):
     with open(img_path, 'rb') as fr:
         img_base64 = base64.b64encode(fr.read())
         img_base64 = str(img_base64, 'utf-8')
